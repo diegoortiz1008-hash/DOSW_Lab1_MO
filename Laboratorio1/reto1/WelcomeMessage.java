@@ -1,7 +1,12 @@
-public class WelcomeMessage{
-    public String message;
+public class WelcomeMessage {
 
-    public WelcomeMessage(String newMessage){
+    private String message;
+
+    public WelcomeMessage(String newMessage) {
         message = newMessage;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }
