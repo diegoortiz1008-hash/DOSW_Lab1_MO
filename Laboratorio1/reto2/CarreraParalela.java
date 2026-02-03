@@ -8,4 +8,7 @@ public class CarreraParalela{
 	public int numeroMasGrande(ArrayList<Integer> numeros){
 		return numeros.stream().max(Integer::compare).get();
 	{
+	public int numeroMasPequeño(ArrayList<Integer> numeros){
+	       return numero.stream().min(Integer::compare).get();
+	}	       
 }
