@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -10,7 +8,6 @@ public class CarreraParalela{
 	public int numeroMasGrande(List<Integer> numeros){
 		return numeros.stream().max(Integer::compare).get();
 	}
-<<<<<<< HEAD
 	public int numeroMasPequeño(List<Integer> numeros){
 	       return numeros.stream().min(Integer::compare).get();
 	}
@@ -20,7 +17,8 @@ public class CarreraParalela{
         return Stream.of(
                 numeroMasGrande(buses),
                 numeroMasPequeño(buses),
-                buses.size()
+                buses.size(),
+				(numeroMasGrande(buses) % 2 == 0) ? 1 : 0
         ).toList();
     }
 }
