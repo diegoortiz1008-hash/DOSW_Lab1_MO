@@ -24,4 +24,22 @@ public class CarreraParalela{
 				(buses.size() % 2 == 0) ? 1 : 0
         ).toList();
     }
+
+	public List<Integer> resultado(List<Integer> firstList, List<Integer> secondList) {
+		return Stream.of(
+				//El toList solo esta dejando meter enteros pana
+				numeroMasGrande(firstList),
+				numeroMasPequeño(firstList),
+				firstList.size(),
+				(numeroMasGrande(firstList) % 2 == 0) ? 1 : 0,
+				(firstList.size() % 2 == 0) ? 1 : 0,
+				-2, //el dos funciona como separador en este caso
+				numeroMasGrande(secondList),
+				numeroMasPequeño(secondList),
+				secondList.size(),
+				(numeroMasGrande(secondList) % 2 == 0) ? 1 : 0,
+				(secondList.size() % 2 == 0) ? 1 : 0
+		).toList();
+	}
+
 }
