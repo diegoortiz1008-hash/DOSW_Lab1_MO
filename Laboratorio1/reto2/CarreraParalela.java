@@ -18,6 +18,7 @@ public class CarreraParalela{
                 numeroMasGrande(buses),
                 numeroMasPequeño(buses),
                 buses.size(),
+				// 1 si el numero mas grande es par, 0 si es impar
 				(numeroMasGrande(buses) % 2 == 0) ? 1 : 0
         ).toList();
     }
