@@ -16,6 +16,6 @@ public class CarreraParalela{
 		max = lista.stream().max(Integer::compare).get();
 		min = lista.stream().min(Integer::compare).get();
 		conteo = lista.stream().count();
-		return list[max, min, conteo]; 
+		return Arrays.asList(max, min, conteo); 
 	}
 }
