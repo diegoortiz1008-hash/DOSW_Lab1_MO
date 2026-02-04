@@ -10,6 +10,7 @@ public class CarreraParalela{
 	public int numeroMasGrande(List<Integer> numeros){
 		return numeros.stream().max(Integer::compare).get();
 	}
+<<<<<<< HEAD
 	public int numeroMasPequeño(List<Integer> numeros){
 	       return numeros.stream().min(Integer::compare).get();
 	}
