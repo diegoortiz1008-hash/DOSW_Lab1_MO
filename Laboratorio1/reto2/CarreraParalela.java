@@ -11,5 +11,10 @@ public class CarreraParalela{
 	public int numeroMasPequeño(ArrayList<Integer> numeros){
 	       return numero.stream().min(Integer::compare).get();
 	}
-.	
+	public list[] resultado(ArrayList<Integer> lista){
+		int max = lista.stream().max(Integer::compare).get();
+		int min = lista.stream().min(Integer::compare).get();
+		long conteo = lista.stream().count();
+		return Arrays.asList(max, min, conteo); 
+	}
 }
