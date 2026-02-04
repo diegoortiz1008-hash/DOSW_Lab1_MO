@@ -17,8 +17,7 @@ public class CarreraParalela{
         return Stream.of(
                 numeroMasGrande(buses),
                 numeroMasPequeño(buses),
-                buses.size(),
-				(numeroMasGrande(buses) % 2 == 0) ? 1 : 0
+                buses.size()
         ).toList();
     }
 }
