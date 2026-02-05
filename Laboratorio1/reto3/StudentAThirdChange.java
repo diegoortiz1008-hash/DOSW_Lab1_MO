@@ -1,5 +1,4 @@
 
-import java.util.function.Function;
 import java.util.stream.IntStream;
 
 public class StudentAThirdChange {
