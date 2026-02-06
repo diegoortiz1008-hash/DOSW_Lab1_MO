@@ -20,5 +20,9 @@ public class Reto4{
         return map;
     }
 
-    // hola
+    public Hashtable<String, Integer> unionMapTable(HashMap<String, Integer> a, Hashtable<String, Integer> b) {
+        Hashtable<String, Integer> result = new Hashtable<>(b);
+        a.forEach((key, value) -> result.put(key, value));
+        return result;
+    }
 }
