@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 
@@ -25,4 +26,15 @@ public class Reto4{
         a.forEach((key, value) -> result.put(key, value));
         return result;
     }
+
+    public static Map<String, Integer> clavesEnMayusculas(Map<String, Integer> mapa) {
+
+        return mapa.entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        e -> e.getKey().toUpperCase(),
+                        Map.Entry::getValue,
+                        (v1, v2) -> v1               
+                ));
+    }   
 }
