@@ -36,5 +36,19 @@ public class Reto4{
                         Map.Entry::getValue,
                         (v1, v2) -> v1               
                 ));
-    }   
+    }
+
+    public static List<Map.Entry<String, Integer>> ordenarValoresMenorAMayor(Map<String, Integer> mapa) {
+        return mapa.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toList());
+    }
+
+    public void mostrarClavesMayusculasConValoresCompleto(Map<String, Integer> mapa) {
+        Map<String, Integer> mapaMayusculas = clavesEnMayusculas(mapa);
+        List<Map.Entry<String, Integer>> ordenados = ordenarValoresMenorAMayor(mapaMayusculas);
+        System.out.println("Resultado completo:");
+        ordenados.forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
+    }
 }
