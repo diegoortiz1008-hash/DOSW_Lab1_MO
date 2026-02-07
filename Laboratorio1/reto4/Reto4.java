@@ -1,3 +1,4 @@
+package reto4;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -6,18 +7,16 @@ import java.util.stream.IntStream;
 public class Reto4{
     public HashMap hash;
 
-    public HashMap<String, Integer> almacenarHashMap(List<String> strings, List<Integer> numeros){
-        if (claves == null || valores == null) {
-        throw new IllegalArgumentException("Las listas no pueden ser nulas");
+    public HashMap<String, Integer> almacenarHashMap(List<String> strings, List<Integer> numeros) {
+        if (strings == null || numeros == null) {
+            throw new IllegalArgumentException("Las listas no pueden ser nulas");
         }
-        if (claves.size() != valores.size()) {
+        if (strings.size() != numeros.size()) {
             throw new IllegalArgumentException("Las listas deben tener el mismo tamaño");
         }
 
         HashMap<String, Integer> map = new HashMap<>();
-
-        IntStream.range(0, claves.size()).forEach(i -> map.putIfAbsent(claves.get(i), valores.get(i)));
-
+        IntStream.range(0, strings.size()).forEach(i -> map.putIfAbsent(strings.get(i), numeros.get(i)));
         return map;
     }
 
