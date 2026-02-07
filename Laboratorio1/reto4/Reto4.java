@@ -50,4 +50,13 @@ public class Reto4{
         System.out.println("Resultado completo:");
         ordenados.forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
     }
+
+    public static void main(String[] args) {
+        Map<String, Integer> mapa = new HashMap<>();
+        mapa.put("Oro", 3);
+        mapa.put("Plata", 1);
+
+        Reto4 reto = new Reto4();
+        reto.mostrarClavesMayusculasConValoresCompleto(mapa);
+    }
 }

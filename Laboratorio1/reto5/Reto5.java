@@ -20,11 +20,13 @@ public class Reto5 {
                 .collect(Collectors.toCollection(TreeSet::new));
     }
 
-    public static TreeSet<Integer> unirColecciones(Set<Integer> hashSetA, Set<Integer> treeSetB) {
+    public TreeSet<Integer> unirColecciones(List<Integer> listaHashSet, List<Integer> listaTreeSet) {
+        Set<Integer> hashSetFiltrado = metodoHashSet(listaHashSet);
+        Set<Integer> treeSetFiltrado = metodoTreeSet(listaTreeSet);
+
         TreeSet<Integer> resultadoFinal = Stream
-                .concat(hashSetA.stream(), treeSetB.stream())
+                .concat(hashSetFiltrado.stream(), treeSetFiltrado.stream())
                 .filter(n -> n % 3 != 0 && n % 5 != 0)
-                .distinct()
                 .collect(Collectors.toCollection(TreeSet::new));
 
         resultadoFinal.forEach(n ->
@@ -32,5 +34,13 @@ public class Reto5 {
         );
 
         return resultadoFinal;
+    }
+
+    public static void main(String[] args) {
+        Reto5 reto = new Reto5();
+        List<Integer> listaHashSet = List.of(4, 9, 15, 7, 18, 21, 10, 5);
+        List<Integer> listaTreeSet = List.of(12, 3, 25, 10, 7, 30, 18, 4);
+        TreeSet<Integer> union1 = reto.unirColecciones(listaHashSet, listaTreeSet);
+        System.out.println("resultado esperado: " + union1);
     }
 }
